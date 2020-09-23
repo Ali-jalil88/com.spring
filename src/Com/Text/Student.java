@@ -1,5 +1,8 @@
 package Com.Text;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
+
 public class Student {
     private String name;
 
@@ -15,6 +18,11 @@ public class Student {
         System.out.println("Hello: " + name);
     }
 
+
+    public String student () {
+        return "Hello spring! Welcome java";
+    }
+    @Bean
     @Override
     public String toString() {
         return "Student{" +

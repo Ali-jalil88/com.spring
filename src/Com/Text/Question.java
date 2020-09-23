@@ -1,5 +1,7 @@
 package Com.Text;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
 import java.util.Iterator;
 import java.util.List;
 
@@ -7,6 +9,7 @@ public class Question {
     private int id;
     private String name;
     private List<String> answers;
+
 
     public Question() {}
     public Question(int id, String name, List<String> answers) {
@@ -16,6 +19,11 @@ public class Question {
         this.answers = answers;
     }
 
+
+    @Bean
+    public String question (){
+        return "Hello Question bean";
+    }
     public void displayInfo(){
         System.out.println(id+" "+name);
         System.out.println("answers are:");

@@ -1,5 +1,10 @@
 package Com.Text;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
+
+import javax.xml.ws.spi.WebServiceFeatureAnnotation;
+@Component
 public class Address {
     private String city;
     private String state;
@@ -12,6 +17,10 @@ public class Address {
         this.state = state;
         this.country = country;
     }
+    public String address (){
+        return "Hello Address bean";
+    }
+    @Bean
 
     @Override
     public String toString() {
