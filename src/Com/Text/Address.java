@@ -1,5 +1,6 @@
 package Com.Text;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
@@ -11,6 +12,9 @@ public class Address {
     private String country;
 
 
+
+
+
     public Address(String city, String state, String country) {
         super();
         this.city = city;
@@ -20,7 +24,7 @@ public class Address {
     public String address (){
         return "Hello Address bean";
     }
-    @Bean
+
 
     @Override
     public String toString() {
